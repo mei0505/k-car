@@ -1497,3 +1497,15 @@ function CardDetailModal({ card, user, db, appId, onClose, showToast }) {
     </div>
   );
 }
+import React from 'react';
+
+function App() {
+  return (
+    <div style={{ padding: '20px', textAlign: 'center' }}>
+      <h1>K-Car App</h1>
+      <p>開發環境已就緒，請在這裡開始建立你的頁面內容。</p>
+    </div>
+  );
+}
+
+export default App;

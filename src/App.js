@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged, signInAnonymously, signInWithCustomToken } from 'firebase/auth';
 import { getFirestore, collection, onSnapshot, doc, addDoc, updateDoc, serverTimestamp, setDoc, deleteDoc } from 'firebase/firestore';
-import { CarFront, CheckCircle, Image as ImageIcon, LogIn, MessageSquare, Plus, Search, Send, User, CalendarDays, ClipboardList, ShieldCheck, LogOut, X, Delete, Camera, Baby, Store, Book, Upload, ExternalLink, Settings, Trash2 } from 'lucide-react';
+import { Car, CheckCircle, Image as ImageIcon, LogIn, MessageSquare, Plus, Search, Send, User, CalendarDays, ClipboardList, ShieldCheck, LogOut, X, Delete, Camera, Baby, Store, Book, Upload, ExternalLink, Settings, Trash2 } from 'lucide-react';
 
 // --- Firebase Initialization ---
 const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
@@ -172,7 +172,7 @@ export default function App() {
       <div className="min-h-screen bg-[#FDF9F7] flex flex-col items-center justify-center p-6">
         <div className="bg-white p-10 rounded-[40px] shadow-xl max-w-sm w-full text-center">
           <div className="w-24 h-24 bg-[#78B0CF] rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
-            <CarFront className="w-12 h-12 text-white" />
+            <Car className="w-12 h-12 text-white" />
           </div>
           <h1 className="text-4xl font-black text-gray-800 mb-2 tracking-tight">K-car</h1>
           <p className="text-gray-400 mb-10 font-medium tracking-wide">您的專屬拼車空間</p>
@@ -200,7 +200,7 @@ export default function App() {
       <header className="bg-white/80 backdrop-blur-md sticky top-0 z-40 px-6 py-4 flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => { setCurrentView('list'); setSelectedCar(null); }}>
           <div className="w-10 h-10 bg-[#78B0CF] rounded-xl flex items-center justify-center shadow-sm">
-            <CarFront size={24} className="text-white" />
+            <Car size={24} className="text-white" />
           </div>
           <span className="text-2xl font-black tracking-tight">K-car</span>
         </div>
@@ -231,7 +231,7 @@ export default function App() {
 
       <nav className="fixed bottom-0 inset-x-0 bg-white/90 backdrop-blur-xl border-t border-gray-100 px-8 py-4 flex justify-between items-center z-40 shadow-[0_-5px_25px_rgba(0,0,0,0.03)]">
         <button onClick={() => setCurrentView('list')} className={`flex flex-col items-center gap-1 ${currentView === 'list' || currentView === 'detail' ? 'text-[#78B0CF]' : 'text-gray-300'}`}>
-          <CarFront size={24} />
+          <Car size={24} />
           <span className="text-[10px] font-black">拼車列表</span>
         </button>
         <button onClick={() => setCurrentView('wishlist')} className={`flex flex-col items-center gap-1 ${currentView === 'wishlist' ? 'text-[#78B0CF]' : 'text-gray-300'}`}>
